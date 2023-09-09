@@ -1,0 +1,129 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: var(--background);
+  padding: 2rem 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  background-color: white;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  height: 0;
+  padding-bottom: 70%;
+  background-image: url("./assets/images/image-product-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    flex-direction: row;
+    max-width: 60rem;
+  }
+  .container {
+    justify-content: center;
+  }
+  .card__image {
+    background-image: url("./assets/images/image-product-desktop.jpg");
+    width: 150%;
+  }
+}
+
+.card__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card__body__subtitle {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.5em;
+  opacity: 40%;
+}
+
+.card__body__title {
+  font-family: "Literata";
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 120%;
+}
+
+.card__body__text {
+  opacity: 60%;
+  line-height: 170%;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__body {
+    padding: 3rem;
+    margin: auto;
+  }
+
+  .card__body__subtitle {
+    font-size: 1rem;
+    opacity: 40%;
+  }
+
+  .card__body__title {
+    font-size: 4rem;
+    line-height: 100%;
+  }
+
+  .card__body__text {
+    font-size: 1.25rem;
+  }
+}
+
+.card__price__container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.card__price__container__price {
+  font-family: "Literata";
+  font-weight: 800;
+  color: var(--foreground);
+  font-size: 2.5rem;
+}
+
+.card__price__container__oldprice {
+  opacity: 40%;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__price__container__price {
+    font-size: 3rem;
+  }
+
+  .card__price__container__oldprice {
+    font-size: 1.125rem;
+  }
+}
+.card__button {
+  padding: 1rem 2rem;
+  background: var(--foreground);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.025rem;
+}

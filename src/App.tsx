@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.Module.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="card">
+        <div className="card__image" />
+        <div className="card__body">
+          <label className="card__body__subtitle">PERFUME</label>
+          <label className="card__body__title">
+            Gabrielle Essence Eau De Parfum
+          </label>
+          <p className="card__body__text">
+            A floral, solar and and voluptuous interpretation composed by
+            Olivier Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div className="card__price__container">
+            <label className="card__price__container__price">$149.99</label>
+            <label className="card__price__container__oldprice">
+              <s>$169.99</s>
+            </label>
+          </div>
+
+          <button className="card__button">Add to Cart</button>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
